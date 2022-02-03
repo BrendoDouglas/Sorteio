@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="mosTitulo">
+            <p id="edTitulo">clicke no titulo para editar</p>
+            <h1 id="nTitulo" onclick="aparecerOp()">Titulo</h1>
+        </div>
+        <div id="esconder">
+            <label for="titulo">insira o titulo aqui</label>
+            <br>
+            <input type="text" id="titulo" name="titulo" onkeyup="novoTitulo(this)" onkeypress="mandarEsconder(event)">
+            <button id="esconderI" onclick="esconderOp()">ok</button>
+        </div>
+
+        <div class="espaco">
+            <br>
+            <br>
+            <div id="inputadcPessoa">
+                <label for="adcPessoa">insira o nome de um participante</label>
+                <br>
+                <input type="text" id="adcPessoa" name="adcPessoa" onkeypress="mandar(event)">
+                <button id="adicionar" onclick="adicionar(document.getElementById('adcPessoa').value)">Adicionar</button>
+            </div>
+            <br>
+            <div id="botoesSorteio">
+                <button onclick="sortear()">Sortear</button>
+                <br>
+                <button onclick="apagarS()">Limpar lista sorteados</button>
+            </div>
+            <h4>Participantes:</h4>
+            <ol id="listaP">
+            </ol>
+        </div>
+        <div id="divSorteados">
+            <h4>Sorteados:</h4>
+            <ol id="listaS"> 
+            </ol>
+        </div>
+    </main>
+    <footer>
+        <p> - repositório - Github</p>
+    </footer>
+</body>
+</html>
